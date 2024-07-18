@@ -1,0 +1,1289 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Roqniyat Form</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400..700&display=swap');
+
+
+    /* h3,
+    .form-label {
+      font-family: "Noto Nastaliq Urdu", serif;
+
+    } */
+
+    /* body {
+      font-family: "Noto Nastaliq Urdu", serif;
+      background-color: rgb(190, 160, 160);
+    } */
+
+
+
+    /* ========== */
+    body {
+      background-color: #f8f9fa;
+      font-family: "Noto Nastaliq Urdu", serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .container {
+      background: #E6E6FA;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+
+    .form-label {
+      font-weight: bold;
+      color: #333;
+    }
+
+    .form-label span {
+      color: red;
+    }
+
+    .form-control {
+      border: 2px solid #ced4da;
+      border-radius: 8px;
+      padding: 6px 10px;
+      font-size: 14px;
+      transition: border-color 0.3s ease;
+      line-height: 2;
+      /* Adjust line height */
+      height: auto;
+    }
+
+    .form-control:focus {
+      border-color: #80bdff;
+      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    }
+
+    .form-select {
+      border: 2px solid #ced4da;
+      border-radius: 8px;
+      padding: 6px 10px;
+      font-size: 14px;
+      transition: border-color 0.3s ease;
+      line-height: 2;
+      /* Adjust line height */
+      height: auto;
+    }
+
+    .form-select:focus {
+      border-color: #80bdff;
+      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    }
+
+    .btn-primary {
+      background-color: #0062cc;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 20px;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: #004a99;
+    }
+
+
+    /* ========== */
+
+    .overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .overlay-content {
+      background-color: white;
+      padding: 20px;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    .success-message {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1001;
+      width: 100%;
+      max-width: 500px;
+      padding: 10px;
+      text-align: center;
+      background-color: #4caf50;
+      color: white;
+      border-radius: 5px;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 5px;
+      right: 10px;
+      cursor: pointer;
+    }
+
+    span {
+      color: red;
+    }
+
+    h3 {
+      line-height: 2;
+    }
+
+    img {
+      width: 250px !important;
+      height: 250px !important;
+      border-radius: 100% !important;
+      margin-bottom: 10px;
+    }
+
+
+    @media(max-width : 1180px) {
+
+
+      img {
+        width: 140px !important;
+        height: 140px !important;
+
+      }
+    }
+
+    @media(max-width : 768px) {
+      h3 {
+        font-size: 17px;
+
+      }
+
+      img {
+        width: 120px !important;
+        height: 120px !important;
+
+      }
+    }
+
+    @media(max-width : 450px) {
+      h3 {
+        font-size: 15px;
+
+      }
+
+      img {
+        width: 80px !important;
+        height: 80px !important;
+
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container py-5">
+    <div class="row d-flex  align-items-center">
+      <div class="col-3">
+        <img src="mufti-obaid.jpg" class="rounded-circle img-fluid" alt="Mufti shb">
+      </div>
+      <div class="col-6">
+        <h3 class="text-center"> قبائلی اضلاع (سابقہ فاٹا) </h3>
+        <h3 class="text-center">2024 رکن سازی مہم</h3>
+        <!-- <h3 class="text-center">2024</h3> -->
+        <h3 class="text-center pb-3 pb-sm-0">جمعیتِ علمائے اسلام پاکستان</h3>
+      </div>
+      <div class="col-3 d-flex justify-content-end">
+        <img src="Quaid.jpg" class="rounded-circle img-fluid" alt="Quid shb">
+      </div>
+
+
+    </div>
+    <form class="row g-3" method="post" action="" id="product" name="product">
+      <div class="col-md-6">
+        <label for="Roqniyat-No" class="form-label">Roqniyat No :رکنیت نمبر<span>(*)</span></label>
+        <input type="number" class="form-control" id="Roqniyat-No" name="Roqniyat-No" required>
+      </div>
+
+      <div class="col-md-6">
+        <label for="Name" class="form-label">Name : نام<span>(*)</span></label>
+        <input type="text" class="form-control" id="Name" name="Name" required>
+      </div>
+
+      <div class="col-md-6">
+        <label for="Parentage" class="form-label">Parentage/Spouse: ولدیت/زوجہ<span>(*)</span></label>
+        <input type="text" class="form-control" id="Parentage" name="Parentage" required>
+      </div>
+
+      <div class="col-md-6">
+        <label for="Cnic" class="form-label">CNIC : شناختی<span>(*)</span></label>
+        <input type="number" class="form-control" id="Cnic" name="Cnic" required>
+      </div>
+
+      <div class="col-md-6">
+        <label for="Contact" class="form-label">Contact Number : رابطہ نمبر</label>
+        <input type="number" class="form-control" id="Contact" name="Contact">
+      </div>
+
+      <div class="col-md-6">
+        <label for="Whatsapp" class="form-label">Whatsapp Number : واٹس ایپ نمبر</label>
+        <input type="number" class="form-control" id="Whatsapp" name="Whatsapp">
+      </div>
+
+      <div class="col-md-6">
+        <label for="Duration" class="form-label">Duration In Party: جماعت وابستگی</label>
+        <select id="Duration" class="form-select" name="Duration">
+          <option selected>پیدائشی</option>
+          <option>ایک سال سے</option>
+          <option>دو سال سے</option>
+          <option>تین سال سے</option>
+          <option>چار سال سے</option>
+          <option>پانچ سال سے</option>
+          <option>دس سال سے</option>
+          <option>پندرہ سال سے</option>
+          <option>بیس سال سے</option>
+          <option>پچیس سال سے</option>
+          <option>تیس سال سے</option>
+        </select>
+      </div>
+
+      <div class="col-md-6">
+        <label for="District" class="form-label">Districts: ضلع</label>
+        <select id="District" class="form-select" name="District">
+          <option value="" selected>Select District</option>
+          <option value="باجوڑ">باجوڑ</option>
+          <option value="اورکزئی">اورکزئی</option>
+          <option value="کرم">کرم</option>
+          <option value="خیبر">خیبر</option>
+          <option value="مہمند">مہمند</option>
+          <option value="جنوبی وزیرستان (حلقہ مسعود)">جنوبی وزیرستان (حلقہ مسعود)</option>
+          <option value="جنوبی وزیرستان (حلقہ وزیر)">جنوبی وزیرستان (حلقہ وزیر)</option>
+          <option value="شمالی وزیرستان">شمالی وزیرستان</option>
+        </select>
+      </div>
+
+      <div class="col-md-6" id="tehsilContainer" style="display: none;">
+        <label for="Tehsil" class="form-label">Tehsils: تحصیل<span>(*)</span></label>
+        <select id="Tehsil" class="form-select" name="Tehsil" required>
+          <option value="">Select Tehsil</option>
+        </select>
+      </div>
+
+      <div class="col-md-6" id="villageCouncilContainer" style="display: none;">
+        <label for="VillageCouncil" class="form-label">Village Councils: ویلج کونسل</label>
+        <select id="VillageCouncil" class="form-select" name="VillageCouncil">
+          <!-- Options will be populated by JavaScript -->
+        </select>
+      </div>
+
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary" id="registerBtn">Register</button>
+      </div>
+    </form>
+  </div>
+
+  <div id="overlay" class="overlay">
+    <div class="overlay-content">
+      <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Processing...</span>
+      </div>
+      <p>Processing...</p>
+    </div>
+  </div>
+
+  <div id="success" class="success-message">
+    <span id="successMsg">Thank you! Your form is submitted successfully.</span>
+    <span class="close-btn" onclick="closeSuccessMessage()">×</span>
+  </div>
+
+  <script>
+    const districtToTehsils = {
+      "اورکزئی": ["لوئر اورکزئی", "اپر اورکزئی", "سنٹرل اورکزئی", "اسماعیل زئی"],
+
+      "کرم": ["سنٹرل کرم", "اپر کرم", "لوئر کرم"],
+      "خیبر": [
+        "باڑہ",
+        "لنڈی کوتل",
+        "جمرود"
+      ],
+      "مہمند": [
+        "بیزئی",
+        "یکا غنڈ",
+        "صافی",
+        "امبار",
+        "حلیم زئی",
+        "پڑانگ غار",
+        "پینڈیالی",
+        "خوئزی"
+      ],
+
+      "جنوبی وزیرستان (حلقہ وزیر)": [
+        "تحصیل برمل",
+        "وانا",
+        "توئی خلہ"
+      ],
+
+      "باجوڑ": [
+        "خار",
+        "ناواگئی",
+        "سلارزی",
+        "اتمان خیل",
+        "واڑہ ماموند",
+        "لوئی ماموند",
+        "برنگ"
+      ],
+
+      "جنوبی وزیرستان (حلقہ مسعود)": ["سراروغہ", "لدھا", "مکین", "شوال", "شکتوئی", "تیارزہ", "سروکئی"],
+
+
+      "شمالی وزیرستان": ["میران شاہ", "میرعلی", "غلام خان", "دتہ خیل", "رزمک", "دوسلی", "گڑیوم", "سپین وام", "شیواہ"],
+    };
+
+    const tehsilToVillages = {
+
+      "میرعلی": [
+        "شیراتلہ 1",
+        "شیراتلہ 2",
+        "میر علی 2",
+        "ایپی",
+        "حیدر خیل",
+        "ذاکر حیل",
+        "حسوخیل1",
+        "حسوخیل2",
+        "مولگان",
+        "عیسوڑی1",
+        "عیسوڑی2",
+        "زیرکی",
+        "خدی1",
+        "خدی2",
+        "عیدک1",
+        "عیدک2",
+        "عیدک3",
+        "نوراک1",
+        "نوراک2",
+        "مبارک شاھی",
+        "خوشحالی 1",
+        "خوشحالی 2",
+        "زیرنی1",
+        "زیرنی2",
+        "زیرنی3",
+        "زیرنی4",
+        "موسکیnc",
+        "ھرمز nc"
+      ],
+      "شیواہ": [
+        "میامی 1",
+        "میامی 2",
+        "میامی پیپلی 3",
+        "سیفعلی کابل خیل",
+        "ملک شاھی کابل خیل"
+      ],
+
+      "سپین وام": [
+        "ٹی ٹی مداخیل",
+        "حسن خیل",
+        "ابا خیل",
+        "شمیری",
+        "بوبلی",
+        "دتہ خیل",
+        "میرعلی 1"
+      ],
+
+      "گڑیوم": ["گڑیوم", "ماٹم"],
+
+      "دوسلی": [
+        "دوسلی",
+        "موسکی",
+        "اسد خیل 1",
+        "اسد خیل 2",
+        "دیر دونی 1",
+        "دیر دونی 2"
+      ],
+
+      "دتہ خیل": [
+        "لانڈ سید آباد",
+        "سید آباد",
+        "محمد خیل 1",
+        "محمد خیل 2",
+        "منظر خیل 1",
+        "منظر خیل 2",
+        "منظر خیل 3",
+        "منظر خیل 4",
+        "خدر خیل 1",
+        "خدر خیل 2",
+        "خدر خیل 3",
+        "شیرانی مداخیل"
+      ],
+      "غلام خان": ["غلام خان 1", "غلام خان 2", "غلام خان 3"],
+
+      "میران شاہ": [
+        "1گاؤں",
+        "2گاؤں",
+      ],
+
+
+      "رزمک": ["رزمک 1", "رزمک 2", "رزمک 3"],
+
+      "سراروغہ": ["کوٹکئی", "شنکئی", "وچہ خوڑہ", "سراروغہ", "ارین خولہ", "پیازہ", "جنتہ"],
+      "لدھا": ["اپر لدھا", "لوئیر لدھا", "اپرکانیگرم", "لوئیرکانیگرم", "دوتوائی"],
+      "مکین": ["نیو مکین", "اولڈمکین", "اپر سپین کمر", "صدر مکین", "درہ مندیچ"],
+      "شوال": ["وچہ درہ", "توندہ درہ", "پلگئی", "رازین", "لوڑہ"],
+      "شکتوئی": ["اپرشکتوئی", "لوئیر شکتوئی", "سلطانیہ", "محسود آباد", "وستی جنگڑہ"],
+      "تیارزہ": ["بروند", "تنگئی", "جاہ ٹرائی گور گورے", "خیسور", "بدر"],
+      "سروکئی": ["چغملائی شعور", "باروند", "تنگی جاہ ٹرائی", "بدر سینہ تیزہ", "میشہ", "تنگڑائی"],
+
+      "خار": [
+        "راغگان",
+        "ولی عہد کورونہ",
+        "میر علی قلعہ",
+        "ماروسہ",
+        "شاہ نرے",
+        "حاجی لونگ",
+        "یوسف آباد",
+        "شیخ بابا",
+        "نوے کلے",
+        "باد سمور",
+        "علی جان قلعہ",
+        "صادق آباد",
+        "عنایت کلے",
+        "فجہ",
+        "ٹانگ خطہ",
+        "جنت شاہ",
+        "ریشکئی",
+        "لوےسم",
+        "تنگئی چارمنگ",
+        "غونڈو",
+        "سمسی"
+      ],
+      "ناواگئی": [
+        "ترس ناواگئی",
+        "برا ناواگئی",
+        "محلہ لال کریم",
+        "غلجو کمانگرہ",
+        "اصغر کنڈارو",
+        "ہاشم چارمنگ1",
+        "حاجی خیل چارمنگ1",
+        "شریف خانہ",
+        "ناوا",
+        "برچمرکنڈ",
+        "برابانڈہ"
+      ],
+      "سلارزی": [
+        "پشت خان کلے",
+        "چینا اگو",
+        "نازکئی",
+        "غوندلئ",
+        "لوئے کلے تنگی",
+        "صاحب آباد",
+        "تلے 1",
+        "کوہی 1",
+        "مانو",
+        "ملاسید",
+        "لکیاتو",
+        "باتوار",
+        "چاچاگئی",
+        "لرہ ڈانڈوکئ",
+        "گمبٹ",
+        "طوفان شاہ",
+        "تندوکہ",
+        "ڈیر",
+        "بٹمالئی",
+        "لوئے کلےسروونو",
+        "لیٹئی",
+        "جورک",
+        "لکو",
+        "ڈھیرہ کئی",
+        "ملکانہ",
+        "تڑلہ",
+        "چینہ گئی",
+        "کوکہ",
+        "ٹوپ",
+        "مینہ",
+        "مانوگئی",
+        "تارانو"
+      ],
+      "اتمان خیل": [
+        "سننکی علیزو",
+        "بتائی علیزو",
+        "سرہ مینہ",
+        "مارانو شاہ",
+        "کولالہ تنگی",
+        "سول قصبہ",
+        "گردی",
+        "سکندرو",
+        "حیاتی",
+        "سیرے مرجان",
+        "غازی بابا",
+        "نارنج",
+        "ڈھیرہ کوارنگ",
+        "صینارے ارنگ",
+        "یادو باغ ارنگ"
+      ],
+      "واڑہ ماموند": [
+        "کگہ حاص",
+        "لمرہ موخہ",
+        "برگٹکئی",
+        "ورکوٹے خاراکے",
+        "سیرے",
+        "شکرو",
+        "خڑکمر",
+        "لوئے خرکے",
+        "شینکوٹ",
+        "شاگو",
+        "بدان بر کلے",
+        "بدان لر کلے",
+        "ڈبر 1",
+        "ڈمہ ڈولہ",
+        "منہ حینہ گی",
+        "گردے باغ",
+        "لرکلان",
+        "گبرے",
+        "مینہ سلمان کلے",
+        "نخر بالا",
+        "عاخئے"
+      ],
+      "لوئی ماموند": [
+        "لرخلوزو",
+        "تنگئی",
+        "برحلوزو",
+        "گلیے",
+        "کٹکوٹ",
+        "لغڑی",
+        "ترخو",
+        "ایراب",
+        "یرکیمل",
+        "لرہ زگئی",
+        "اگرہ",
+        "لرہ مینہ"
+      ],
+      "برنگ": [
+        "ستر بتی",
+        "برترنماؤ",
+        "نظر مینہ",
+        "مور درہ",
+        "میمولہ برنگ",
+        "قمبر",
+        "تار",
+        "پانچ کوڑہ"
+      ],
+
+
+
+
+
+      "تحصیل برمل": [
+        "انگور اڈہ",
+        "دانا (رغزائ)",
+        "اعظم ورسک",
+        "موسی نیکہ",
+        "سرے خورے",
+        "دانا (وچہ دانا)",
+        "شولام",
+        "مانڑہ خولہ",
+        "شین ورسک",
+        "کرمزی (لنڈی دوگ)",
+        "کالوشہ (کرے خیل)",
+        "نارگوسہ (1)",
+        "کژہ پنگہ",
+        "زالئ",
+        "زیڑہ لیٹہ",
+        "نارگوسہ (2)",
+        "دانا",
+        "لنڈے وڑئی",
+        "خمرنگ",
+        "منڈی کونڑ",
+        "باغڑ",
+        "سراکنڈہ",
+        "جالولائی",
+        "زم چن",
+        "ماٹک",
+        "وچہ دانا",
+        "غورلامہ",
+        "مانڑہ",
+        "شیرمندائی",
+        "کالوتائی",
+        "خوشیئے کاندہ",
+        "کرمزی",
+        "ورابلائی",
+        "سلور خیل",
+        "غنڈئی",
+        "ملک آنات کلے",
+        "نار گوسئی",
+        "سرغیشئی",
+        "اُرمندائی",
+        "سالیمہ",
+        "بیباک",
+        "کژوپنگہ",
+        "کونڈی زائی",
+        "بومائی",
+        "وچوبائی",
+        "خنگائی",
+        "نامزئی",
+        "ژوژندہ",
+        "نیزی نارائی",
+        "گوڑا",
+        "لاک کونڑائی",
+        "غونڈے",
+        "نارگوسئی"
+      ],
+      "وانا": [
+        "وانا سٹی 1",
+        "وانا سٹی 2",
+        "مغل خیل",
+        "کاریز کوٹ",
+        "کڑی کوٹ (1)",
+        "کڑی کوٹ (2)",
+        "نوا کوٹ شکئ",
+        "ڈوگ",
+        "سرکی کوٹ (کرے خیل)",
+        "زیڑی نور",
+        "ڈابکوٹ",
+        "غواخواہ",
+        "ثمرباغ (ٹھٹی دوتانی)",
+        "بابرغونڈائ",
+        "مازک",
+        "سانگہ",
+        "ڈانڈ",
+        "شمال خیل (خونیاخیل)",
+        "کاکا خیل اڈاوانا",
+        "گڑے پیزہ",
+        "رووہ کلے",
+        "میچن بابا",
+        "آستروام",
+        "ہندی کچ",
+        "اشرف خیل کلے",
+        "آغبار گائی",
+        "تیارزہ خولہ",
+        "الیوم",
+        "تالا بانی کلے",
+        "لمن",
+        "بانگی خیل کلے",
+        "مغل خیل کلے",
+        "زیڑی نور کالونی",
+        "گنگی خیل کاریز کوٹ",
+        "کڑی کوٹ (ڈبکوٹ)",
+        "کڑی کوٹ",
+        "شاہ کوٹ",
+        "ووزائی",
+        "گوارہ",
+        "پیر باغ",
+        "آنغر کلے",
+        "سپین",
+        "جرمنائی کلے",
+        "تنائ کوٹ",
+        "کرب کوٹ",
+        "مرماندائی کلے",
+        "کڑم گائی (شکائی)",
+        "نواں کوٹ",
+        "مغل خیل/ہاتھی خیل",
+        "سی کچ",
+        "غلجہ",
+        "شیرنہ کلے",
+        "کابلائی",
+        "شاہ وزائی ٹھٹھی",
+        "کرے خیل (سالورائی)",
+        "زیڑی نور",
+        "تاران",
+        "لیوا کاندہ",
+        "ڈب کوٹ (کاڈی زائی)",
+        "غواہ خواہ",
+        "درگے کوت",
+        "تورزانائی",
+        "ہزرب",
+        "ٹھٹھی غنی خیل",
+        "غنی خیل",
+        "ٹھٹھی دوتانی",
+        "شویکی نارائی",
+        "دارگاوا",
+        "درگئی",
+        "گاڑوائی ڈوگ (سپین)",
+        "زییڑئی",
+        "زییڑئی کوٹ",
+        "شگئی (سپین)",
+        "بدین خیل کلے",
+        "شودیا کی (شکئی)",
+        "سورکوٹ",
+        "کنڈی نور",
+        "جونی میلہ (شکائی)",
+        "گوارگورہ",
+        "شیرغہ",
+        "پوتئے خیل",
+        "وچہ خوڑہ",
+        "آمندہ خیل",
+        "پور خیل",
+        "وانا"
+      ],
+      "توئی خلہ": [
+        "تحصیل کلے",
+        "کوٹ کائ کلے",
+        "برغڑائ کلے",
+        "بارندائ کلے",
+        "ٹاٹوکی کلے",
+        "سپلے پوران",
+        "گل کچ بازار کلے",
+        "گل کچ کلے",
+        "خان کوٹ",
+        "زرمیلن",
+        "براندائی کلے",
+        "تاتوکائی کلے",
+        "گل کچھ بازار کلے",
+        "گل کچھ کلے",
+        "خان کوٹ زارمیلن"
+      ],
+
+      "بیزئی": [
+        "کوڈا خیل",
+        "بابازے",
+        "موسی خیل",
+        "سوران درہ"
+      ],
+      "یکا غنڈ": [
+        "ڈب کور",
+        "راول کور",
+        "بھائی کادوکور",
+        "دروازگئی",
+        "شاعالم",
+        "ہلکی گنداو",
+        "عقرب ڈاگ",
+        "یکہ غنڈ"
+      ],
+      "صافی": [
+        "قند ہاریVC1",
+        "قند ہاریVC2",
+        "قند ہاریVC3",
+        "گربز VC9",
+        "گربزNC10",
+        "مسعود VC1",
+        "مسعود VC2",
+        "مسعود VC3",
+        "ساگی بالا",
+        "ساگی پایاں",
+        "علینگار",
+        "شیخ بابا"
+      ],
+      "امبار": [
+        "سرہ شاہVC1",
+        "شاتی مینہVC2",
+        "گمبتےVC3",
+        "خارے درہVC4",
+        "قولہ خارےVC5",
+        "کمانگرہVC6",
+        "موسیٰ کورVC7",
+        "لویہ شاہVC8",
+        "کارغہ میاگانVC9"
+      ],
+      "حلیم زئی": [
+        "غلنۂیNC13",
+        "بابی خیلVC",
+        "کوزی کدئیVC2",
+        "کوزہ کدئیVC1",
+        "شاتی کورNC",
+        "دورباخیلNC4",
+        "دورباخیلVC2",
+        "غازی بیکVC1",
+        "برہ کدی خیلVC2",
+        "کمالےVC1",
+        "کمالےVC2"
+      ],
+      "پڑانگ غار": [
+        "یحییٰ خیل ملا گوری",
+        "دین خیل",
+        "عمر خیل",
+        "شہادت خیل"
+      ],
+      "پینڈیالی": [
+        "برہان خیل VC1",
+        "برہان خیل VC2",
+        "برہان خیل VC3",
+        "برہان خیل VC4",
+        "عیسیٰ خیل VC1",
+        "عیسیٰ خیل VC2",
+        "عیسیٰ خیل VC3",
+        "عیسیٰ خیل VC4",
+        "تمانزئی VC1",
+        "تمانزئی VC2",
+        "تمانزئی VC3"
+      ],
+      "خوئزی": [
+        "خوئزی",
+        "کونگ",
+        "آٹا بازار"
+      ],
+
+
+
+
+      "لوئر اورکزئی": [
+        "آنجانی", "خواہ درہ", "کارغان", "انڑخیل", "زیڑہ", "پلوسی", "گھڑی تال",
+        "قاسم خیل", "جلکا میلہ فیروز خیل", "چھپری فیروز خیل", "بیزوٹ", "خیال مات خان کلے",
+        "ٹانڈہ", "احمد خیل", "قلات", "کلایا", "کوریز", "درگئی", "ابی شال", "ترنگی"
+      ],
+      "اپر اورکزئی": [
+        "اخون کوٹ", "سمہ", "ارغینجہ", "شیوا پلا خیل", "باغناک", "سپیدار", "زختان",
+        "خادیزئی", "گل چیڑی", "کول", "پختانے", "ستر کلیے"
+      ],
+      "سنٹرل اورکزئی": [
+        "مشتی بازار", "تاغہ سام", "مندتی مشتی", "کاشا", "باگارہ مشتی", "رنگین خیل",
+        "وام پانڑا", "دران شیخان بالا", "گندا چن"
+      ],
+      "اسماعیل زئی": ["غلجو", "چنے کلے", "غوز گڑھ", "سیفل درہ", "بلند خیل"],
+      "باڑہ": [
+        "اٹاری ایریا",
+        "حاجی ڈھنڈ",
+        "سنزل خیل1",
+        "سنزل خیل2",
+        "سنزل خیل3",
+        "یوسی مداخیل",
+        "زاوہ کلے 1",
+        "زاوہ کلے 2",
+        "خاونگئی",
+        "مداخیل 1",
+        "مداخیل 2",
+        "سلطان خیل 1",
+        "سلطان خیل 2",
+        "سلطان خیل 3",
+        "مواز کلی",
+        "میری خیل1",
+        "میری خیل2",
+        "میری خیل3",
+        "میری خیل4",
+        "میری خیل5",
+        "میری خیل6",
+        "میری خیل7",
+        "سرہ شگہ",
+        "سپین ڈھنڈ",
+        "ہمدرد کلے",
+        "سیدان کلے ہنر غاڑہ",
+        "سم بابا",
+        "سورکس 1 ہاشم اور حمید اللہ جان کلے",
+        "یاراحمد کلے سورکس نمبر 2",
+        "پکہ تاڑہ نمبر 1",
+        "توت ڈھنڈ",
+        "سرکی کمر",
+        "شینکو",
+        "سورکمر نمبر2 یار مت شاہ کلے",
+        "ولی آباد",
+        "جان خان کلے",
+        "سپین قبر اے",
+        "سپین قبر بی",
+        "سپین قبر سی",
+        "سپین قبر ڈی",
+        "سپین قبر ای",
+        "یوسف تالاب",
+        "تودہ چینہ",
+        "یو ایس بوکاڑ",
+        "شین کمر",
+        "پردل آباد",
+        "معتبر کلے قمبرآباد",
+        "بازار گل کلے",
+        "جمال باز کلے",
+        "امیر نصراللہ کلے",
+        "قمبر آباد کلے",
+        "خان کلیم کلے",
+        "کلا خیل کرنا خیل",
+        "عمر خان خیل 1",
+        "عمر خان خیل 2",
+        "سورڈھنڈ ملکدین خیل",
+        "کوہی ملکدین خیل",
+        "نالہ ملکدین کیل",
+        "ناویہ کمر",
+        "مانے سر مدرسہ",
+        "ٹپو جانے کلے",
+        "سرور خیلو کلے",
+        "دارس جماعت",
+        "بوٹان مدرسہ تیراہ",
+        "سمند کلی تیراہ",
+        "لالی کس تیراہ",
+        "خوجل خیل تیراہ",
+        "سوخ",
+        "ڈونگا تیراہ",
+        "ورسک سوخ",
+        "منتو کس",
+        "ساڑے کنڈاو اے",
+        "ساڑے کنڈاو  بی",
+        "دولت خیل عالم خیل",
+        "واچہ پائی",
+        "عالم گودر اے",
+        "عالم گودر بی",
+        "ملک وارث خان کلے",
+        "حضرت علی کلے"
+      ],
+
+      "لنڈی کوتل": [
+        "آش خیل",
+        "دلخاد چارباغ",
+        "گاگرہ",
+        "میرادخیل 1 درکے",
+        "میرادخیل 2",
+        "شیخ مل خیل1",
+        "شیخ مل خیل2",
+        "شیخ مل خیل3",
+        "شیخ مل خیل4",
+        "مختار خیل",
+        "پیرو خیل 1",
+        "پیرو خیل 2",
+        "ذخہ خیل",
+        "خیبر ذخہ1",
+        "خیبر ذخہ2",
+        "خیبر ذخہ3",
+        "خیبر ذخہ4",
+        "خیبر ذخہ5",
+        "خیبر ذخہ6",
+        "کم شلمان",
+        "پڑانگ درہ",
+        "شین پوخ",
+        "لوئی شلمان1",
+        "لوئی شلمان2",
+        "لوئی شلمان3",
+        "لوئی شلمان4",
+        "بازار ذخہ خیل1",
+        "بازار ذخہ خیل2",
+        "بازار ذخہ خیل3",
+        "بازار ذخہ خیل4",
+        "بازار ذخہ خیل5",
+        "لنڈی کوتل اربن 1",
+        "لنڈی کوتل اربن 2",
+        "لنڈی کوتل اربن 3",
+        "لنڈی کوتل اربن 4",
+        "لنڈی کوتل اربن 5"
+      ],
+      "جمرود": [
+        "سور کمر 1",
+        "سور کمر 2",
+        "ورمنڈو میلہ",
+        "غنڈی1",
+        "غنڈی2",
+        "غنڈی3",
+        "غنڈی4",
+        "غنڈی5",
+        "قدم",
+        "جالادین",
+        "شاہ کس1",
+        "شاہ کس2",
+        "شاہ کس3",
+        "شاہ کس4",
+        "شاہ کس5",
+        "علی مسجد",
+        "چورا",
+        "لالا چینہ",
+        "تاتارہ",
+        "پائیندی لالمہ 1",
+        "پائیندی لالمہ 2",
+        "گجر ڈھنڈ",
+        "لورہ مینہ",
+        "مین مورچہ",
+        "جمرود ٹاون 1",
+        "جمرود ٹاون 2",
+        "جمرود ٹاون 3",
+        "جمرود ٹاون 4",
+        "جمرود ٹاون 5",
+        "جمرود ٹاون 6",
+        "جمرود ٹاون 7",
+        "جمرود ٹاون 8"
+      ],
+
+      "تحصیل1": ["گاؤں1", "گاؤں2", "گاؤں3"],
+      "تحصیل2": ["گاؤں4", "گاؤں5", "گاؤں6"],
+      "سنٹرل کرم": [
+        "بدامہ",
+        "تڑالی",
+        "تودے اوبہ",
+        "خوری کلے",
+        "ڈوگر",
+        "جودرہ",
+        "درگی",
+        "تیندو",
+        "نوی کلے",
+        "اوی درہ",
+        "سید کرم",
+        "گنداؤ",
+        "انگوری",
+        "گوگانے",
+        "آروازہ",
+        "پاس میلہ",
+        "تابے خانی خیل",
+        "بازے",
+        "گودر",
+        "مناتو",
+        "چنارک",
+        "قرت",
+        "پلوسین",
+        "جلامے",
+        "سمندر کلے",
+        "مرغان",
+        "سنڈہ غر"
+      ],
+      "اپر کرم": [
+        "ملانہ 1",
+        "زیڑان 1",
+        "زیڑان 2",
+        "زیڑان یوسف خیل",
+        "کڑمان 1",
+        "کڑمان 2",
+        "بغکی",
+        "شلوزان 1",
+        "شلوزان 1", // Assuming this is intentional repetition
+        "لقمان خیل",
+        "علشاری",
+        "پیواڑ",
+        "حر لاچی",
+        "تری منگل1",
+        "تری منگل2",
+        "غوز گڑھی",
+        "شینگاک",
+        "شاخ",
+        "بوشھرہ",
+        "نستی کوٹ1",
+        "نستی کوٹ2",
+        "احمد زئی",
+        "مالی خیل",
+        "کچکینہ",
+        "علن شیر",
+        "شبلان"
+      ],
+      "لوئر کرم": [
+        "عمل کوٹ",
+        "بیساتو",
+        "خار کلے ،میروکس",
+        "ابراہیم زئی",
+        "ساتین1",
+        "ساتین2",
+        "ششو",
+        "کوچی،شانواز کلے",
+        "مخی زئی",
+        "بلیامین",
+        "مندوری",
+        "چھپری",
+        "صدہ ٹاون1",
+        "صدہ ٹاون2",
+        "صدہ ٹاون3",
+        "پیر قیوم",
+        "علی زئی",
+        "بگن"
+      ],
+    };
+
+    document.getElementById('District').addEventListener('change', function () {
+      const selectedDistrict = this.value;
+      const tehsilDropdown = document.getElementById('Tehsil');
+      const tehsilContainer = document.getElementById('tehsilContainer');
+
+      // Clear existing options
+      tehsilDropdown.innerHTML = '<option value="">Select Tehsil</option>';
+
+      // Add new options
+      if (selectedDistrict) {
+        districtToTehsils[selectedDistrict].forEach(function (tehsil) {
+          const option = document.createElement('option');
+          option.value = tehsil;
+          option.text = tehsil;
+          tehsilDropdown.add(option);
+        });
+
+        // Show the tehsil dropdown
+        tehsilContainer.style.display = 'block';
+      } else {
+        // Hide the tehsil dropdown if no district is selected
+        tehsilContainer.style.display = 'none';
+        document.getElementById('villageCouncilContainer').style.display = 'none';
+      }
+    });
+
+    document.getElementById('Tehsil').addEventListener('change', function () {
+      const selectedTehsil = this.value;
+      const villageDropdown = document.getElementById('VillageCouncil');
+      const villageCouncilContainer = document.getElementById('villageCouncilContainer');
+
+      // Clear existing options
+      villageDropdown.innerHTML = '<option value="">Select Village Council</option>';
+
+      // Add new options
+      if (selectedTehsil) {
+        tehsilToVillages[selectedTehsil].forEach(function (village) {
+          const option = document.createElement('option');
+          option.value = village;
+          option.text = village;
+          villageDropdown.add(option);
+        });
+
+        // Show the village councils dropdown
+        villageCouncilContainer.style.display = 'block';
+      } else {
+        // Hide the village councils dropdown if no tehsil is selected
+        villageCouncilContainer.style.display = 'none';
+      }
+    });
+
+
+
+
+    // ========================= //
+
+
+
+
+    // ======================= //
+    const scriptURLs = {
+      "باجوڑ": 'https://script.google.com/macros/s/AKfycbx9AsXk4cL2MDw9_q5ycncG89Tf5rf3oGane_IoGslvkxms7QjYdBxbsClKIIY-mRHW/exec',
+      "اورکزئی": 'https://script.google.com/macros/s/AKfycbwLB4suNgcxUN2eGPZ-wKi7IMB3oCqIFEcL_YjPAZg9TMy4Fo2xYS4ny8y31_Q2wEOPeA/exec',
+      "کرم": 'https://script.google.com/macros/s/AKfycbyVsuo-fqU-si6QFbXbgWEudRu5x9un7t7yOfp1jXEp5JP5-H3dO58x7BcZ5sw76GZd/exec',
+      "خیبر": 'https://script.google.com/macros/s/AKfycbxQb28qEdPxozlZ5KHUOfiJ0jnaBZtKiB-VHWwsWgpSvqvnT-Vo_tzrK7VluBcEHRKt_A/exec',
+      "مہمند": 'https://script.google.com/macros/s/AKfycbwkNaX9at1d5gf0j1LFqOYTS1K4ZfhQ3tDhxydZ5DE5xjF24dyAhLngn_M0crsfhBeo/exec',
+      "جنوبی وزیرستان (حلقہ مسعود)": 'https://script.google.com/macros/s/AKfycbyWUN5D7-CUTc73wboZ231NDo7ISI-PceEfUaK9aSzGu_Kx0IafvZWMqUi2wU9fEs4W/exec',
+      "جنوبی وزیرستان (حلقہ وزیر)": 'https://script.google.com/macros/s/AKfycbwgTzKz2Spvs9-QTyaRRMMAdh6lr_2yl3fuUveR4xcajl40cWLt7Atx3EN7daqB24qwcg/exec',
+      "شمالی وزیرستان": 'https://script.google.com/macros/s/AKfycbzXgXa-FowsZ8AHaEYBAcC7Lwb6f7Mi17oolZ8GOt6Ux-yO-Xf8jAWnNv0Ecc4utrB2iA/exec'
+    };
+
+    const form = document.forms['product'];
+    const overlay = document.getElementById('overlay');
+    const successDiv = document.getElementById('success');
+    const districtSelect = document.getElementById('District');
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const registerBtn = document.getElementById('registerBtn');
+
+      // Get the selected district
+      const selectedDistrict = districtSelect.value;
+
+      // Get the corresponding script URL for the selected district
+      const scriptURL = scriptURLs[selectedDistrict];
+
+      if (!scriptURL) {
+        alert('Please select a valid district.');
+        return;
+      }
+
+      // Disable the register button
+      registerBtn.disabled = true;
+
+      // Show processing overlay
+      overlay.style.display = 'flex';
+
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+          // Hide processing overlay
+          overlay.style.display = 'none';
+
+          // Show success message
+          showSuccessMessage();
+
+          // Re-enable the register button
+          registerBtn.disabled = false;
+
+          // Optionally, you can reset the form here
+          form.reset();
+          document.getElementById('tehsilContainer').style.display = 'none';
+          document.getElementById('villageCouncilContainer').style.display = 'none';
+        })
+        .catch(error => {
+          console.error('Error!', error.message);
+
+          // Hide processing overlay
+          overlay.style.display = 'none';
+
+          // Re-enable the register button in case of error
+          registerBtn.disabled = false;
+        });
+    });
+
+    function showSuccessMessage() {
+      successDiv.style.display = 'block';
+      setTimeout(function () {
+        hideSuccessMessage();
+      }, 10000); // Auto hide after 10 seconds
+    }
+
+    function hideSuccessMessage() {
+      successDiv.style.display = 'none';
+    }
+
+    function closeSuccessMessage() {
+      hideSuccessMessage();
+    }
+
+
+
+
+
+
+    // ================== //
+
+
+    // const scriptURL = 'https://script.google.com/macros/s/AKfycbyVsuo-fqU-si6QFbXbgWEudRu5x9un7t7yOfp1jXEp5JP5-H3dO58x7BcZ5sw76GZd/exec';
+    // const form = document.forms['product'];
+    // const overlay = document.getElementById('overlay');
+    // const successDiv = document.getElementById('success');
+
+    // form.addEventListener('submit', e => {
+    //   e.preventDefault();
+    //   const registerBtn = document.getElementById('registerBtn');
+
+    //   // Disable the register button
+    //   registerBtn.disabled = true;
+
+    //   // Show processing overlay
+    //   overlay.style.display = 'flex';
+
+    //   fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+    //     .then(response => {
+    //       // Hide processing overlay
+    //       overlay.style.display = 'none';
+
+    //       // Show success message
+    //       showSuccessMessage();
+
+    //       // Re-enable the register button
+    //       registerBtn.disabled = false;
+
+    //       // Optionally, you can reset the form here
+    //       form.reset();
+    //       document.getElementById('tehsilContainer').style.display = 'none';
+    //       document.getElementById('villageCouncilContainer').style.display = 'none';
+    //     })
+    //     .catch(error => {
+    //       console.error('Error!', error.message);
+
+    //       // Hide processing overlay
+    //       overlay.style.display = 'none';
+
+    //       // Re-enable the register button in case of error
+    //       registerBtn.disabled = false;
+    //     });
+    // });
+
+    // function showSuccessMessage() {
+    //   successDiv.style.display = 'block';
+    //   setTimeout(function () {
+    //     hideSuccessMessage();
+    //   }, 10000); // Auto hide after 10 seconds
+    // }
+
+    // function hideSuccessMessage() {
+    //   successDiv.style.display = 'none';
+    // }
+
+    // function closeSuccessMessage() {
+    //   hideSuccessMessage();
+    // }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
